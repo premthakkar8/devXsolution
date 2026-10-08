@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DevX — Your next review, already drafted</title>
+    <meta
+      name="description"
+      content="DevX is an early-access workspace from DevX Solution. Connect a repository and it drafts the pull-request brief, points at the files that matter, and writes the changelog line."
+    />
+    <meta name="theme-color" content="#efeae1" />
+    <link rel="canonical" href="https://devxsolution.online" />
+    <meta property="og:title" content="DevX — Your next review, already drafted" />
+    <meta
+      property="og:description"
+      content="A hosted workspace for software teams. Early access from DevX Solution."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://devxsolution.online" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "DevX Solution",
+        "url": "https://devxsolution.online",
+        "email": "contact@devxsolution.online",
+        "description": "Early-stage studio building DevX, a hosted AI workspace for engineering teams."
+      }
+    </script>
+  </head>
+  <body id="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#top">
+          <img src="favicon.svg" alt="" width="28" height="28" />
+          <span>DevX</span>
+        </a>
+        <nav class="nav-links" aria-label="Page">
+          <a href="#product">Product</a>
+          <a href="#brief">Sample brief</a>
+          <a href="#access">Access</a>
+        </nav>
+        <a class="button button-small" href="#access">Request access</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <p class="kicker">DevX Solution · Early access</p>
+          <h1>Your next review, already drafted.</h1>
+          <p class="lede">
+            DevX is a hosted workspace for software teams. Connect a repository
+            and it prepares the note a reviewer actually wants: what changed,
+            where to look, and what might break.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#access">Request access</a>
+            <a class="text-link" href="#brief">Read a sample brief</a>
+          </div>
+          <p class="fine">
+            <a href="mailto:contact@devxsolution.online">contact@devxsolution.online</a>
+            · devxsolution.online
+          </p>
+        </div>
+
+        <figure class="window" aria-label="Preview of the DevX review workspace">
+          <figcaption class="window-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>billing-service · pull request #482</span>
+            <span class="pill">Preview</span>
+          </figcaption>
+          <div class="window-body">
+            <ul class="file-list">
+              <li class="active">tax/calc.ts</li>
+              <li>api/invoice.ts</li>
+              <li>tests/invoice.test.ts</li>
+            </ul>
+            <div class="brief-card">
+              <p class="brief-label">Review brief</p>
+              <h2>Tax rounding now lives in one function.</h2>
+              <p>
+                <code>roundTax()</code> moved into <code>tax/calc.ts</code>.
+                Two call sites in the invoice handler were updated. A zero-tax
+                test is still missing.
+              </p>
+              <p class="risk"><strong>Risk.</strong> Half-up invoices can shift by one cent.</p>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <section class="band" id="product">
+        <div class="shell">
+          <p class="kicker">What DevX prepares</p>
+          <h2 class="section-title">Three notes, written from the diff.</h2>
+          <ol class="jobs">
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Pull-request brief</h3>
+                <p>
+                  A short review of the change: the files that matter, the
+                  behavior that moved, and the question a reviewer should ask
+                  first.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Answers from the repo</h3>
+                <p>
+                  Ask where a behavior lives. DevX points at files and
+                  functions in the repository you connected, instead of guessing
+                  from a snippet pasted into a blank chat.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h3>A record you can keep</h3>
+                <p>
+                  When the change merges, DevX drafts a changelog line and a
+                  doc edit so the explanation does not stay trapped in a chat
+                  thread.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="shell sample" id="brief">
+        <div class="sample-intro">
+          <p class="kicker">Sample brief</p>
+          <h2 class="section-title">Short enough to paste into the pull request.</h2>
+          <p>
+            This is the shape of the note DevX writes. It is a product preview,
+            from a sample change, not a customer story.
+          </p>
+        </div>
+        <article class="paper">
+          <header class="paper-top">
+            <p>billing-service</p>
+            <p>PR #482 · ready for review</p>
+          </header>
+          <h3>Tax rounding moved into tax/calc.ts</h3>
+          <h4>What changed</h4>
+          <p>
+            Invoice tax is rounded in one function. The API handler calls it
+            instead of rounding inline.
+          </p>
+          <h4>Look here first</h4>
+          <ul>
+            <li><code>tax/calc.ts</code> — new <code>roundTax()</code></li>
+            <li><code>api/invoice.ts</code> — two call sites updated</li>
+            <li><code>tests/invoice.test.ts</code> — zero-tax case still missing</li>
+          </ul>
+          <h4>Risk</h4>
+          <p>European invoices that use half-up rounding may shift by one cent.</p>
+          <h4>Suggested note</h4>
+          <blockquote>Please add a test for a zero-tax line before merge.</blockquote>
+        </article>
+      </section>
+
+      <section class="band steps-band" id="how">
+        <div class="shell steps">
+          <div>
+            <p class="kicker">How access works</p>
+            <h2 class="section-title">One repository to start.</h2>
+            <p class="steps-lead">
+              DevX is in early access. We onboard a small number of teams and
+              keep the first connection limited to a single repository.
+            </p>
+          </div>
+          <ol>
+            <li>
+              <h3>Grant read access</h3>
+              <p>GitHub or GitLab. Read access is enough for the first brief.</p>
+            </li>
+            <li>
+              <h3>Open a pull request, or ask</h3>
+              <p>DevX drafts the brief beside the change, or answers a question about the code.</p>
+            </li>
+            <li>
+              <h3>Keep what is useful</h3>
+              <p>You copy the note into the pull request or the changelog. DevX does not post it for you.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="shell access" id="access">
+        <div>
+          <p class="kicker">Request access</p>
+          <h2 class="section-title">Tell us which repo to read first.</h2>
+          <p>
+            Early access is free while we onboard. There is no payment form on
+            this site. Write to
+            <a href="mailto:contact@devxsolution.online">contact@devxsolution.online</a>
+            and we reply from that address.
+          </p>
+          <dl class="facts">
+            <div>
+              <dt>Company</dt>
+              <dd>DevX Solution</dd>
+            </div>
+            <div>
+              <dt>Site</dt>
+              <dd>devxsolution.online</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd>contact@devxsolution.online</dd>
+            </div>
+          </dl>
+        </div>
+
+        <form id="access-form" class="form">
+          <label>
+            Name
+            <input name="name" type="text" autocomplete="name" required />
+          </label>
+          <label>
+            Work email
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            Repository host
+            <select name="host" required>
+              <option value="GitHub">GitHub</option>
+              <option value="GitLab">GitLab</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label>
+            What should the first brief cover?
+            <textarea name="note" rows="4" placeholder="A service, a folder, or the kind of change you review most often."></textarea>
+          </label>
+          <button class="button" type="submit">Email DevX</button>
+          <p class="fine">Opens your email app with a message to contact@devxsolution.online.</p>
+          <div id="confirmation" class="confirmation" hidden>
+            <p>If your email app did not open, copy this note and send it to contact@devxsolution.online.</p>
+            <textarea id="draft" readonly></textarea>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <div>
+          <strong>DevX Solution</strong>
+          <p>Early-stage studio building DevX, a hosted workspace for engineering teams.</p>
+        </div>
+        <div>
+          <a href="mailto:contact@devxsolution.online">contact@devxsolution.online</a>
+          <p>devxsolution.online</p>
+        </div>
+        <p class="legal">
+          Messages sent to us are used to reply about access. We do not sell
+          contact details. © 2026 DevX Solution.
+        </p>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
