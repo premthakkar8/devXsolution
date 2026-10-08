@@ -25,7 +25,7 @@ if (form && confirmation && draft) {
     confirmation.hidden = false;
     confirmation.scrollIntoView({ behavior: "smooth", block: "nearest" });
 
-    const href = `mailto:contact@devxsolution.online?subject=${encodeURIComponent(
+    const href = `mailto:support@devxsolution.online?subject=${encodeURIComponent(
       `DevX early access — ${name}`
     )}&body=${encodeURIComponent(body)}`;
 

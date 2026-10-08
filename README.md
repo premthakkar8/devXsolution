@@ -1,28 +1,25 @@
-# DevX
+# DevX Solution
 
-Public site for [DevX Solution](https://devxsolution.online), an early-stage studio building DevX.
+DevX Solution builds **DevX**, an early-access AI workspace for software teams.
 
-DevX is a hosted workspace for software teams. It prepares a pull-request brief, answers questions about a connected repository, and drafts a changelog line from the change. The product is in early access.
+The public site is [devxsolution.online](https://devxsolution.online). Write to [support@devxsolution.online](mailto:support@devxsolution.online).
 
-Contact: [contact@devxsolution.online](mailto:contact@devxsolution.online)
+## What DevX does
 
-## Preview
+DevX connects to a Git repository and prepares the note a reviewer actually uses:
 
-Open `index.html` in a browser. There is no build step.
+- A pull-request brief: what changed, which files matter, and what might break
+- Answers about that codebase, pointed at files and functions
+- A changelog line and a doc edit after the change merges
 
-## Put it on devxsolution.online
+A team starts with read access to one repository. DevX does not post to GitHub or GitLab. Someone copies the note into the pull request or the changelog if they want to keep it.
 
-The contact address is already on this domain. If email routing is on Cloudflare, keep the nameservers there and attach the site as a Cloudflare Pages project:
+Early access is free while the first teams are being onboarded.
 
-1. Create a Pages project from this repository.
-2. Leave the build command empty and set the output directory to `/`.
-3. Add the custom domain `devxsolution.online`.
+## This repository
 
-GitHub Pages works too. This folder includes a `CNAME` file. Point the apex at GitHub with these A records:
+This is the public website for DevX Solution. It describes the product, shows a sample review brief, and collects early-access requests at `support@devxsolution.online`.
 
-- `185.199.108.153`
-- `185.199.109.153`
-- `185.199.110.153`
-- `185.199.111.153`
+There is no build step. Netlify publishes the repository root from the `main` branch.
 
-Point `www` at `<github-user>.github.io`.
+Live site: [https://devxsolution-online.netlify.app](https://devxsolution-online.netlify.app)
